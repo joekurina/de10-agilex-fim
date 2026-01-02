@@ -1,4 +1,4 @@
-#OFS FIM for DE10-Agilex
+# OFS FIM for DE10-Agilex
 
 I noticed that the DE10-Agilex is very similar to the n6001 card, so I made an attempt at porting it to OFS.
 I used the old Terasic BSP for the OpenCL driver, the Schematic and Datasheet folders on the CD, and the DE10_Agilex_Golden_Top files as a reference.

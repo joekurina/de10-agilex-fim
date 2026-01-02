@@ -1,0 +1,14 @@
+[ip]
+type = ofs
+
+[settings]
+platform = de10-agilex
+family = agilex
+fim = base_x16
+part = AGFB014R24B2E2V
+device_id = DE10
+
+[pcie.settings]
+# DE10 Agilex P-Tile supports Gen4 x16
+# Legacy BSP used Gen3 due to aclpci driver limitation; OFS uses OPAE which supports Gen4
+pcie_gen = 4

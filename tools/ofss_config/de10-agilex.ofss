@@ -1,0 +1,6 @@
+[default]
+"$OFS_ROOTDIR"/tools/ofss_config/base/de10_agilex_base.ofss
+"$OFS_ROOTDIR"/tools/ofss_config/pcie/pcie_de10.ofss
+"$OFS_ROOTDIR"/tools/ofss_config/iopll/iopll_470MHz.ofss
+"$OFS_ROOTDIR"/tools/ofss_config/memory/memory_de10.ofss
+"$OFS_ROOTDIR"/tools/ofss_config/hssi/hssi_de10.ofss

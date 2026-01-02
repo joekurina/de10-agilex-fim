@@ -1,0 +1,25 @@
+# Copyright (C) 2024 Intel Corporation
+# SPDX-License-Identifier: MIT
+#
+# HSSI Configuration for DE10-Agilex
+# Configures E-Tile HSSI subsystem for QSFP-DD Port A (8 lanes)
+#
+# The DE10-Agilex has 2x QSFP-DD cages connected to 16 E-Tile transceivers:
+# - Port A (QSFPDDA): hssi_if[0-7] - configured here
+# - Port B (QSFPDDB): reserved for 16-channel configuration
+#
+# Reference clock: SI5397A provides 156.25 MHz via PIN_AJ12
+# 
+# Supported configurations:
+#   8x25GbE  - 8 lanes at 25.78125 Gbps (NRZ) = 200Gbps aggregate
+#   2x100GbE - 2 ports using 100GCAUI-4 (4 lanes each)
+#   4x100GbE - Would require both QSFP ports (16 channels)
+#
+
+[ip]
+type = hssi
+
+[settings]
+output_name = hssi_ss
+num_channels = 8
+data_rate = 25GbE

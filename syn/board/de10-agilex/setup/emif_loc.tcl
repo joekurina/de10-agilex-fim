@@ -1,0 +1,628 @@
+# Copyright (C) 2024 Intel Corporation
+# SPDX-License-Identifier: MIT
+
+#
+# Description
+#-----------------------------------------------------------------------------
+#
+# DDR4 Memory pin and location assignments for DE10 Agilex
+# 4 channels (DDR4A, DDR4B, DDR4C, DDR4D), 8 GiB each, 72-bit with ECC
+# Extracted from Terasic DE10 Agilex BSP (B2E2_8GBx4 variant)
+#
+#-----------------------------------------------------------------------------
+
+#-----------------------------------------------------------------------------
+# DDR4 Channel 0 (DDR4A) - 8 GiB
+#-----------------------------------------------------------------------------
+set_location_assignment PIN_A10  -to ddr4_mem[0].ref_clk
+
+# Address/Command
+set_location_assignment PIN_F17  -to ddr4_mem[0].a[0]
+set_location_assignment PIN_H17  -to ddr4_mem[0].a[1]
+set_location_assignment PIN_G16  -to ddr4_mem[0].a[2]
+set_location_assignment PIN_J16  -to ddr4_mem[0].a[3]
+set_location_assignment PIN_F15  -to ddr4_mem[0].a[4]
+set_location_assignment PIN_H15  -to ddr4_mem[0].a[5]
+set_location_assignment PIN_G14  -to ddr4_mem[0].a[6]
+set_location_assignment PIN_J14  -to ddr4_mem[0].a[7]
+set_location_assignment PIN_F13  -to ddr4_mem[0].a[8]
+set_location_assignment PIN_H13  -to ddr4_mem[0].a[9]
+set_location_assignment PIN_G12  -to ddr4_mem[0].a[10]
+set_location_assignment PIN_J12  -to ddr4_mem[0].a[11]
+set_location_assignment PIN_D9   -to ddr4_mem[0].a[12]
+set_location_assignment PIN_A8   -to ddr4_mem[0].a[13]
+set_location_assignment PIN_C8   -to ddr4_mem[0].a[14]
+set_location_assignment PIN_B7   -to ddr4_mem[0].a[15]
+set_location_assignment PIN_D7   -to ddr4_mem[0].a[16]
+set_location_assignment PIN_C6   -to ddr4_mem[0].ba[0]
+set_location_assignment PIN_B5   -to ddr4_mem[0].ba[1]
+set_location_assignment PIN_D5   -to ddr4_mem[0].bg[0]
+set_location_assignment PIN_B17  -to ddr4_mem[0].bg[1]
+set_location_assignment PIN_B13  -to ddr4_mem[0].ck
+set_location_assignment PIN_D13  -to ddr4_mem[0].ck_n
+set_location_assignment PIN_A14  -to ddr4_mem[0].cke[0]
+set_location_assignment PIN_C14  -to ddr4_mem[0].cke[1]
+set_location_assignment PIN_A16  -to ddr4_mem[0].cs_n[0]
+set_location_assignment PIN_A12  -to ddr4_mem[0].cs_n[1]
+set_location_assignment PIN_B15  -to ddr4_mem[0].odt[0]
+set_location_assignment PIN_D15  -to ddr4_mem[0].odt[1]
+set_location_assignment PIN_D17  -to ddr4_mem[0].reset_n
+set_location_assignment PIN_C16  -to ddr4_mem[0].act_n
+set_location_assignment PIN_C12  -to ddr4_mem[0].par
+set_location_assignment PIN_A6   -to ddr4_mem[0].alert_n
+set_location_assignment PIN_B9   -to ddr4_mem[0].oct_rzqin
+
+# DQS groups (9 byte lanes for 72-bit with ECC)
+set_location_assignment PIN_T15  -to ddr4_mem[0].dqs[0]
+set_location_assignment PIN_V15  -to ddr4_mem[0].dqs_n[0]
+set_location_assignment PIN_L8   -to ddr4_mem[0].dqs[1]
+set_location_assignment PIN_N8   -to ddr4_mem[0].dqs_n[1]
+set_location_assignment PIN_U8   -to ddr4_mem[0].dqs[2]
+set_location_assignment PIN_W8   -to ddr4_mem[0].dqs_n[2]
+set_location_assignment PIN_M15  -to ddr4_mem[0].dqs[3]
+set_location_assignment PIN_P15  -to ddr4_mem[0].dqs_n[3]
+set_location_assignment PIN_B29  -to ddr4_mem[0].dqs[4]
+set_location_assignment PIN_D29  -to ddr4_mem[0].dqs_n[4]
+set_location_assignment PIN_M29  -to ddr4_mem[0].dqs[5]
+set_location_assignment PIN_P29  -to ddr4_mem[0].dqs_n[5]
+set_location_assignment PIN_T29  -to ddr4_mem[0].dqs[6]
+set_location_assignment PIN_V29  -to ddr4_mem[0].dqs_n[6]
+set_location_assignment PIN_U22  -to ddr4_mem[0].dqs[7]
+set_location_assignment PIN_W22  -to ddr4_mem[0].dqs_n[7]
+set_location_assignment PIN_L22  -to ddr4_mem[0].dqs[8]
+set_location_assignment PIN_N22  -to ddr4_mem[0].dqs_n[8]
+
+# DQ byte lane 0
+set_location_assignment PIN_W12  -to ddr4_mem[0].dq[0]
+set_location_assignment PIN_W16  -to ddr4_mem[0].dq[1]
+set_location_assignment PIN_U12  -to ddr4_mem[0].dq[2]
+set_location_assignment PIN_V13  -to ddr4_mem[0].dq[3]
+set_location_assignment PIN_T17  -to ddr4_mem[0].dq[4]
+set_location_assignment PIN_V17  -to ddr4_mem[0].dq[5]
+set_location_assignment PIN_T13  -to ddr4_mem[0].dq[6]
+set_location_assignment PIN_U16  -to ddr4_mem[0].dq[7]
+set_location_assignment PIN_U14  -to ddr4_mem[0].dbi_n[0]
+
+# DQ byte lane 1
+set_location_assignment PIN_N10  -to ddr4_mem[0].dq[8]
+set_location_assignment PIN_P5   -to ddr4_mem[0].dq[9]
+set_location_assignment PIN_L6   -to ddr4_mem[0].dq[10]
+set_location_assignment PIN_L10  -to ddr4_mem[0].dq[11]
+set_location_assignment PIN_N6   -to ddr4_mem[0].dq[12]
+set_location_assignment PIN_P9   -to ddr4_mem[0].dq[13]
+set_location_assignment PIN_M9   -to ddr4_mem[0].dq[14]
+set_location_assignment PIN_M5   -to ddr4_mem[0].dq[15]
+set_location_assignment PIN_M7   -to ddr4_mem[0].dbi_n[1]
+
+# DQ byte lane 2
+set_location_assignment PIN_U6   -to ddr4_mem[0].dq[16]
+set_location_assignment PIN_V9   -to ddr4_mem[0].dq[17]
+set_location_assignment PIN_W6   -to ddr4_mem[0].dq[18]
+set_location_assignment PIN_T9   -to ddr4_mem[0].dq[19]
+set_location_assignment PIN_W10  -to ddr4_mem[0].dq[20]
+set_location_assignment PIN_T5   -to ddr4_mem[0].dq[21]
+set_location_assignment PIN_V5   -to ddr4_mem[0].dq[22]
+set_location_assignment PIN_U10  -to ddr4_mem[0].dq[23]
+set_location_assignment PIN_T7   -to ddr4_mem[0].dbi_n[2]
+
+# DQ byte lane 3
+set_location_assignment PIN_N16  -to ddr4_mem[0].dq[24]
+set_location_assignment PIN_L12  -to ddr4_mem[0].dq[25]
+set_location_assignment PIN_M17  -to ddr4_mem[0].dq[26]
+set_location_assignment PIN_P17  -to ddr4_mem[0].dq[27]
+set_location_assignment PIN_P13  -to ddr4_mem[0].dq[28]
+set_location_assignment PIN_M13  -to ddr4_mem[0].dq[29]
+set_location_assignment PIN_L16  -to ddr4_mem[0].dq[30]
+set_location_assignment PIN_N12  -to ddr4_mem[0].dq[31]
+set_location_assignment PIN_L14  -to ddr4_mem[0].dbi_n[3]
+
+# DQ byte lane 4
+set_location_assignment PIN_B27  -to ddr4_mem[0].dq[32]
+set_location_assignment PIN_A30  -to ddr4_mem[0].dq[33]
+set_location_assignment PIN_B31  -to ddr4_mem[0].dq[34]
+set_location_assignment PIN_A26  -to ddr4_mem[0].dq[35]
+set_location_assignment PIN_C26  -to ddr4_mem[0].dq[36]
+set_location_assignment PIN_D27  -to ddr4_mem[0].dq[37]
+set_location_assignment PIN_D31  -to ddr4_mem[0].dq[38]
+set_location_assignment PIN_C30  -to ddr4_mem[0].dq[39]
+set_location_assignment PIN_A28  -to ddr4_mem[0].dbi_n[4]
+
+# DQ byte lane 5
+set_location_assignment PIN_M27  -to ddr4_mem[0].dq[40]
+set_location_assignment PIN_N26  -to ddr4_mem[0].dq[41]
+set_location_assignment PIN_N30  -to ddr4_mem[0].dq[42]
+set_location_assignment PIN_P31  -to ddr4_mem[0].dq[43]
+set_location_assignment PIN_P27  -to ddr4_mem[0].dq[44]
+set_location_assignment PIN_L26  -to ddr4_mem[0].dq[45]
+set_location_assignment PIN_L30  -to ddr4_mem[0].dq[46]
+set_location_assignment PIN_M31  -to ddr4_mem[0].dq[47]
+set_location_assignment PIN_L28  -to ddr4_mem[0].dbi_n[5]
+
+# DQ byte lane 6
+set_location_assignment PIN_T27  -to ddr4_mem[0].dq[48]
+set_location_assignment PIN_U30  -to ddr4_mem[0].dq[49]
+set_location_assignment PIN_W26  -to ddr4_mem[0].dq[50]
+set_location_assignment PIN_V31  -to ddr4_mem[0].dq[51]
+set_location_assignment PIN_V27  -to ddr4_mem[0].dq[52]
+set_location_assignment PIN_U26  -to ddr4_mem[0].dq[53]
+set_location_assignment PIN_T31  -to ddr4_mem[0].dq[54]
+set_location_assignment PIN_W30  -to ddr4_mem[0].dq[55]
+set_location_assignment PIN_U28  -to ddr4_mem[0].dbi_n[6]
+
+# DQ byte lane 7
+set_location_assignment PIN_V23  -to ddr4_mem[0].dq[56]
+set_location_assignment PIN_V19  -to ddr4_mem[0].dq[57]
+set_location_assignment PIN_U24  -to ddr4_mem[0].dq[58]
+set_location_assignment PIN_U20  -to ddr4_mem[0].dq[59]
+set_location_assignment PIN_W20  -to ddr4_mem[0].dq[60]
+set_location_assignment PIN_T23  -to ddr4_mem[0].dq[61]
+set_location_assignment PIN_W24  -to ddr4_mem[0].dq[62]
+set_location_assignment PIN_T19  -to ddr4_mem[0].dq[63]
+set_location_assignment PIN_T21  -to ddr4_mem[0].dbi_n[7]
+
+# DQ byte lane 8 (ECC)
+set_location_assignment PIN_M23  -to ddr4_mem[0].dq[64]
+set_location_assignment PIN_N20  -to ddr4_mem[0].dq[65]
+set_location_assignment PIN_L20  -to ddr4_mem[0].dq[66]
+set_location_assignment PIN_P23  -to ddr4_mem[0].dq[67]
+set_location_assignment PIN_P19  -to ddr4_mem[0].dq[68]
+set_location_assignment PIN_M19  -to ddr4_mem[0].dq[69]
+set_location_assignment PIN_L24  -to ddr4_mem[0].dq[70]
+set_location_assignment PIN_N24  -to ddr4_mem[0].dq[71]
+set_location_assignment PIN_M21  -to ddr4_mem[0].dbi_n[8]
+
+#-----------------------------------------------------------------------------
+# DDR4 Channel 1 (DDR4B) - 8 GiB
+#-----------------------------------------------------------------------------
+set_location_assignment PIN_L40  -to ddr4_mem[1].ref_clk
+
+# Address/Command
+set_location_assignment PIN_T33  -to ddr4_mem[1].a[0]
+set_location_assignment PIN_V33  -to ddr4_mem[1].a[1]
+set_location_assignment PIN_U34  -to ddr4_mem[1].a[2]
+set_location_assignment PIN_W34  -to ddr4_mem[1].a[3]
+set_location_assignment PIN_T35  -to ddr4_mem[1].a[4]
+set_location_assignment PIN_V35  -to ddr4_mem[1].a[5]
+set_location_assignment PIN_U36  -to ddr4_mem[1].a[6]
+set_location_assignment PIN_W36  -to ddr4_mem[1].a[7]
+set_location_assignment PIN_T37  -to ddr4_mem[1].a[8]
+set_location_assignment PIN_V37  -to ddr4_mem[1].a[9]
+set_location_assignment PIN_U38  -to ddr4_mem[1].a[10]
+set_location_assignment PIN_W38  -to ddr4_mem[1].a[11]
+set_location_assignment PIN_P41  -to ddr4_mem[1].a[12]
+set_location_assignment PIN_L42  -to ddr4_mem[1].a[13]
+set_location_assignment PIN_N42  -to ddr4_mem[1].a[14]
+set_location_assignment PIN_M43  -to ddr4_mem[1].a[15]
+set_location_assignment PIN_P43  -to ddr4_mem[1].a[16]
+set_location_assignment PIN_N44  -to ddr4_mem[1].ba[0]
+set_location_assignment PIN_M45  -to ddr4_mem[1].ba[1]
+set_location_assignment PIN_P45  -to ddr4_mem[1].bg[0]
+set_location_assignment PIN_M33  -to ddr4_mem[1].bg[1]
+set_location_assignment PIN_M37  -to ddr4_mem[1].ck
+set_location_assignment PIN_P37  -to ddr4_mem[1].ck_n
+set_location_assignment PIN_L36  -to ddr4_mem[1].cke[0]
+set_location_assignment PIN_N36  -to ddr4_mem[1].cke[1]
+set_location_assignment PIN_L34  -to ddr4_mem[1].cs_n[0]
+set_location_assignment PIN_L38  -to ddr4_mem[1].cs_n[1]
+set_location_assignment PIN_M35  -to ddr4_mem[1].odt[0]
+set_location_assignment PIN_P35  -to ddr4_mem[1].odt[1]
+set_location_assignment PIN_P33  -to ddr4_mem[1].reset_n
+set_location_assignment PIN_N34  -to ddr4_mem[1].act_n
+set_location_assignment PIN_N38  -to ddr4_mem[1].par
+set_location_assignment PIN_L44  -to ddr4_mem[1].alert_n
+set_location_assignment PIN_M41  -to ddr4_mem[1].oct_rzqin
+
+# DQS groups
+set_location_assignment PIN_G42  -to ddr4_mem[1].dqs[0]
+set_location_assignment PIN_J42  -to ddr4_mem[1].dqs_n[0]
+set_location_assignment PIN_F35  -to ddr4_mem[1].dqs[1]
+set_location_assignment PIN_H35  -to ddr4_mem[1].dqs_n[1]
+set_location_assignment PIN_A42  -to ddr4_mem[1].dqs[2]
+set_location_assignment PIN_C42  -to ddr4_mem[1].dqs_n[2]
+set_location_assignment PIN_B35  -to ddr4_mem[1].dqs[3]
+set_location_assignment PIN_D35  -to ddr4_mem[1].dqs_n[3]
+set_location_assignment PIN_A56  -to ddr4_mem[1].dqs[4]
+set_location_assignment PIN_C56  -to ddr4_mem[1].dqs_n[4]
+set_location_assignment PIN_T49  -to ddr4_mem[1].dqs[5]
+set_location_assignment PIN_V49  -to ddr4_mem[1].dqs_n[5]
+set_location_assignment PIN_L56  -to ddr4_mem[1].dqs[6]
+set_location_assignment PIN_N56  -to ddr4_mem[1].dqs_n[6]
+set_location_assignment PIN_U56  -to ddr4_mem[1].dqs[7]
+set_location_assignment PIN_W56  -to ddr4_mem[1].dqs_n[7]
+set_location_assignment PIN_M49  -to ddr4_mem[1].dqs[8]
+set_location_assignment PIN_P49  -to ddr4_mem[1].dqs_n[8]
+
+# DQ byte lanes 0-8 (72-bit)
+set_location_assignment PIN_J44  -to ddr4_mem[1].dq[0]
+set_location_assignment PIN_J40  -to ddr4_mem[1].dq[1]
+set_location_assignment PIN_G44  -to ddr4_mem[1].dq[2]
+set_location_assignment PIN_F41  -to ddr4_mem[1].dq[3]
+set_location_assignment PIN_H45  -to ddr4_mem[1].dq[4]
+set_location_assignment PIN_F45  -to ddr4_mem[1].dq[5]
+set_location_assignment PIN_H41  -to ddr4_mem[1].dq[6]
+set_location_assignment PIN_G40  -to ddr4_mem[1].dq[7]
+set_location_assignment PIN_F43  -to ddr4_mem[1].dbi_n[0]
+
+set_location_assignment PIN_J34  -to ddr4_mem[1].dq[8]
+set_location_assignment PIN_H37  -to ddr4_mem[1].dq[9]
+set_location_assignment PIN_H33  -to ddr4_mem[1].dq[10]
+set_location_assignment PIN_F33  -to ddr4_mem[1].dq[11]
+set_location_assignment PIN_J38  -to ddr4_mem[1].dq[12]
+set_location_assignment PIN_G38  -to ddr4_mem[1].dq[13]
+set_location_assignment PIN_F37  -to ddr4_mem[1].dq[14]
+set_location_assignment PIN_G34  -to ddr4_mem[1].dq[15]
+set_location_assignment PIN_G36  -to ddr4_mem[1].dbi_n[1]
+
+set_location_assignment PIN_D41  -to ddr4_mem[1].dq[16]
+set_location_assignment PIN_A40  -to ddr4_mem[1].dq[17]
+set_location_assignment PIN_B45  -to ddr4_mem[1].dq[18]
+set_location_assignment PIN_C44  -to ddr4_mem[1].dq[19]
+set_location_assignment PIN_D45  -to ddr4_mem[1].dq[20]
+set_location_assignment PIN_C40  -to ddr4_mem[1].dq[21]
+set_location_assignment PIN_A44  -to ddr4_mem[1].dq[22]
+set_location_assignment PIN_B41  -to ddr4_mem[1].dq[23]
+set_location_assignment PIN_B43  -to ddr4_mem[1].dbi_n[2]
+
+set_location_assignment PIN_B33  -to ddr4_mem[1].dq[24]
+set_location_assignment PIN_A34  -to ddr4_mem[1].dq[25]
+set_location_assignment PIN_D37  -to ddr4_mem[1].dq[26]
+set_location_assignment PIN_A38  -to ddr4_mem[1].dq[27]
+set_location_assignment PIN_D33  -to ddr4_mem[1].dq[28]
+set_location_assignment PIN_C34  -to ddr4_mem[1].dq[29]
+set_location_assignment PIN_B37  -to ddr4_mem[1].dq[30]
+set_location_assignment PIN_C38  -to ddr4_mem[1].dq[31]
+set_location_assignment PIN_A36  -to ddr4_mem[1].dbi_n[3]
+
+set_location_assignment PIN_A54  -to ddr4_mem[1].dq[32]
+set_location_assignment PIN_D55  -to ddr4_mem[1].dq[33]
+set_location_assignment PIN_C58  -to ddr4_mem[1].dq[34]
+set_location_assignment PIN_F61  -to ddr4_mem[1].dq[35]
+set_location_assignment PIN_H61  -to ddr4_mem[1].dq[36]
+set_location_assignment PIN_C54  -to ddr4_mem[1].dq[37]
+set_location_assignment PIN_B55  -to ddr4_mem[1].dq[38]
+set_location_assignment PIN_D59  -to ddr4_mem[1].dq[39]
+set_location_assignment PIN_B57  -to ddr4_mem[1].dbi_n[4]
+
+set_location_assignment PIN_U48  -to ddr4_mem[1].dq[40]
+set_location_assignment PIN_V47  -to ddr4_mem[1].dq[41]
+set_location_assignment PIN_U52  -to ddr4_mem[1].dq[42]
+set_location_assignment PIN_W48  -to ddr4_mem[1].dq[43]
+set_location_assignment PIN_T51  -to ddr4_mem[1].dq[44]
+set_location_assignment PIN_T47  -to ddr4_mem[1].dq[45]
+set_location_assignment PIN_W52  -to ddr4_mem[1].dq[46]
+set_location_assignment PIN_V51  -to ddr4_mem[1].dq[47]
+set_location_assignment PIN_U50  -to ddr4_mem[1].dbi_n[5]
+
+set_location_assignment PIN_L58  -to ddr4_mem[1].dq[48]
+set_location_assignment PIN_L54  -to ddr4_mem[1].dq[49]
+set_location_assignment PIN_P55  -to ddr4_mem[1].dq[50]
+set_location_assignment PIN_P59  -to ddr4_mem[1].dq[51]
+set_location_assignment PIN_N54  -to ddr4_mem[1].dq[52]
+set_location_assignment PIN_M55  -to ddr4_mem[1].dq[53]
+set_location_assignment PIN_N58  -to ddr4_mem[1].dq[54]
+set_location_assignment PIN_M59  -to ddr4_mem[1].dq[55]
+set_location_assignment PIN_M57  -to ddr4_mem[1].dbi_n[6]
+
+set_location_assignment PIN_W58  -to ddr4_mem[1].dq[56]
+set_location_assignment PIN_V59  -to ddr4_mem[1].dq[57]
+set_location_assignment PIN_U58  -to ddr4_mem[1].dq[58]
+set_location_assignment PIN_V55  -to ddr4_mem[1].dq[59]
+set_location_assignment PIN_U54  -to ddr4_mem[1].dq[60]
+set_location_assignment PIN_T55  -to ddr4_mem[1].dq[61]
+set_location_assignment PIN_T59  -to ddr4_mem[1].dq[62]
+set_location_assignment PIN_W54  -to ddr4_mem[1].dq[63]
+set_location_assignment PIN_T57  -to ddr4_mem[1].dbi_n[7]
+
+set_location_assignment PIN_L48  -to ddr4_mem[1].dq[64]
+set_location_assignment PIN_P47  -to ddr4_mem[1].dq[65]
+set_location_assignment PIN_N48  -to ddr4_mem[1].dq[66]
+set_location_assignment PIN_M51  -to ddr4_mem[1].dq[67]
+set_location_assignment PIN_P51  -to ddr4_mem[1].dq[68]
+set_location_assignment PIN_M47  -to ddr4_mem[1].dq[69]
+set_location_assignment PIN_L52  -to ddr4_mem[1].dq[70]
+set_location_assignment PIN_N52  -to ddr4_mem[1].dq[71]
+set_location_assignment PIN_L50  -to ddr4_mem[1].dbi_n[8]
+
+#-----------------------------------------------------------------------------
+# DDR4 Channel 2 (DDR4C) - 8 GiB
+#-----------------------------------------------------------------------------
+set_location_assignment PIN_DC8  -to ddr4_mem[2].ref_clk
+
+# Address/Command
+set_location_assignment PIN_CV15 -to ddr4_mem[2].a[0]
+set_location_assignment PIN_CT15 -to ddr4_mem[2].a[1]
+set_location_assignment PIN_CU14 -to ddr4_mem[2].a[2]
+set_location_assignment PIN_CR14 -to ddr4_mem[2].a[3]
+set_location_assignment PIN_CV13 -to ddr4_mem[2].a[4]
+set_location_assignment PIN_CT13 -to ddr4_mem[2].a[5]
+set_location_assignment PIN_CU12 -to ddr4_mem[2].a[6]
+set_location_assignment PIN_CR12 -to ddr4_mem[2].a[7]
+set_location_assignment PIN_CV11 -to ddr4_mem[2].a[8]
+set_location_assignment PIN_CT11 -to ddr4_mem[2].a[9]
+set_location_assignment PIN_CU10 -to ddr4_mem[2].a[10]
+set_location_assignment PIN_CR10 -to ddr4_mem[2].a[11]
+set_location_assignment PIN_CY7  -to ddr4_mem[2].a[12]
+set_location_assignment PIN_DC6  -to ddr4_mem[2].a[13]
+set_location_assignment PIN_DA6  -to ddr4_mem[2].a[14]
+set_location_assignment PIN_DB5  -to ddr4_mem[2].a[15]
+set_location_assignment PIN_CY5  -to ddr4_mem[2].a[16]
+set_location_assignment PIN_CY3  -to ddr4_mem[2].ba[0]
+set_location_assignment PIN_CV1  -to ddr4_mem[2].ba[1]
+set_location_assignment PIN_CT1  -to ddr4_mem[2].bg[0]
+set_location_assignment PIN_DB15 -to ddr4_mem[2].bg[1]
+set_location_assignment PIN_DB11 -to ddr4_mem[2].ck
+set_location_assignment PIN_CY11 -to ddr4_mem[2].ck_n
+set_location_assignment PIN_DC12 -to ddr4_mem[2].cke[0]
+set_location_assignment PIN_DA12 -to ddr4_mem[2].cke[1]
+set_location_assignment PIN_DC14 -to ddr4_mem[2].cs_n[0]
+set_location_assignment PIN_DC10 -to ddr4_mem[2].cs_n[1]
+set_location_assignment PIN_DB13 -to ddr4_mem[2].odt[0]
+set_location_assignment PIN_CY13 -to ddr4_mem[2].odt[1]
+set_location_assignment PIN_CY15 -to ddr4_mem[2].reset_n
+set_location_assignment PIN_DA14 -to ddr4_mem[2].act_n
+set_location_assignment PIN_DA10 -to ddr4_mem[2].par
+set_location_assignment PIN_DA4  -to ddr4_mem[2].alert_n
+set_location_assignment PIN_DB7  -to ddr4_mem[2].oct_rzqin
+
+# DQS groups
+set_location_assignment PIN_CH27 -to ddr4_mem[2].dqs[0]
+set_location_assignment PIN_CF27 -to ddr4_mem[2].dqs_n[0]
+set_location_assignment PIN_CM27 -to ddr4_mem[2].dqs[1]
+set_location_assignment PIN_CK27 -to ddr4_mem[2].dqs_n[1]
+set_location_assignment PIN_CG20 -to ddr4_mem[2].dqs[2]
+set_location_assignment PIN_CE20 -to ddr4_mem[2].dqs_n[2]
+set_location_assignment PIN_CN20 -to ddr4_mem[2].dqs[3]
+set_location_assignment PIN_CL20 -to ddr4_mem[2].dqs_n[3]
+set_location_assignment PIN_CH13 -to ddr4_mem[2].dqs[4]
+set_location_assignment PIN_CF13 -to ddr4_mem[2].dqs_n[4]
+set_location_assignment PIN_CM13 -to ddr4_mem[2].dqs[5]
+set_location_assignment PIN_CK13 -to ddr4_mem[2].dqs_n[5]
+set_location_assignment PIN_CG6  -to ddr4_mem[2].dqs[6]
+set_location_assignment PIN_CE6  -to ddr4_mem[2].dqs_n[6]
+set_location_assignment PIN_CN6  -to ddr4_mem[2].dqs[7]
+set_location_assignment PIN_CL6  -to ddr4_mem[2].dqs_n[7]
+set_location_assignment PIN_DB27 -to ddr4_mem[2].dqs[8]
+set_location_assignment PIN_CY27 -to ddr4_mem[2].dqs_n[8]
+
+# DQ byte lanes 0-8 (72-bit)
+set_location_assignment PIN_CH25 -to ddr4_mem[2].dq[0]
+set_location_assignment PIN_CF29 -to ddr4_mem[2].dq[1]
+set_location_assignment PIN_CG24 -to ddr4_mem[2].dq[2]
+set_location_assignment PIN_CH29 -to ddr4_mem[2].dq[3]
+set_location_assignment PIN_CE28 -to ddr4_mem[2].dq[4]
+set_location_assignment PIN_CF25 -to ddr4_mem[2].dq[5]
+set_location_assignment PIN_CE24 -to ddr4_mem[2].dq[6]
+set_location_assignment PIN_CG28 -to ddr4_mem[2].dq[7]
+set_location_assignment PIN_CG26 -to ddr4_mem[2].dbi_n[0]
+
+set_location_assignment PIN_CN28 -to ddr4_mem[2].dq[8]
+set_location_assignment PIN_CK25 -to ddr4_mem[2].dq[9]
+set_location_assignment PIN_CK29 -to ddr4_mem[2].dq[10]
+set_location_assignment PIN_CM25 -to ddr4_mem[2].dq[11]
+set_location_assignment PIN_CM29 -to ddr4_mem[2].dq[12]
+set_location_assignment PIN_CL24 -to ddr4_mem[2].dq[13]
+set_location_assignment PIN_CN24 -to ddr4_mem[2].dq[14]
+set_location_assignment PIN_CL28 -to ddr4_mem[2].dq[15]
+set_location_assignment PIN_CN26 -to ddr4_mem[2].dbi_n[1]
+
+set_location_assignment PIN_CF21 -to ddr4_mem[2].dq[16]
+set_location_assignment PIN_CE22 -to ddr4_mem[2].dq[17]
+set_location_assignment PIN_CG18 -to ddr4_mem[2].dq[18]
+set_location_assignment PIN_CH17 -to ddr4_mem[2].dq[19]
+set_location_assignment PIN_CF17 -to ddr4_mem[2].dq[20]
+set_location_assignment PIN_CE18 -to ddr4_mem[2].dq[21]
+set_location_assignment PIN_CG22 -to ddr4_mem[2].dq[22]
+set_location_assignment PIN_CH21 -to ddr4_mem[2].dq[23]
+set_location_assignment PIN_CH19 -to ddr4_mem[2].dbi_n[2]
+
+set_location_assignment PIN_CN18 -to ddr4_mem[2].dq[24]
+set_location_assignment PIN_CL22 -to ddr4_mem[2].dq[25]
+set_location_assignment PIN_CM21 -to ddr4_mem[2].dq[26]
+set_location_assignment PIN_CK17 -to ddr4_mem[2].dq[27]
+set_location_assignment PIN_CL18 -to ddr4_mem[2].dq[28]
+set_location_assignment PIN_CK21 -to ddr4_mem[2].dq[29]
+set_location_assignment PIN_CN22 -to ddr4_mem[2].dq[30]
+set_location_assignment PIN_CM17 -to ddr4_mem[2].dq[31]
+set_location_assignment PIN_CM19 -to ddr4_mem[2].dbi_n[3]
+
+set_location_assignment PIN_CF11 -to ddr4_mem[2].dq[32]
+set_location_assignment PIN_CE14 -to ddr4_mem[2].dq[33]
+set_location_assignment PIN_CG14 -to ddr4_mem[2].dq[34]
+set_location_assignment PIN_CF15 -to ddr4_mem[2].dq[35]
+set_location_assignment PIN_CE10 -to ddr4_mem[2].dq[36]
+set_location_assignment PIN_CG10 -to ddr4_mem[2].dq[37]
+set_location_assignment PIN_CH15 -to ddr4_mem[2].dq[38]
+set_location_assignment PIN_CH11 -to ddr4_mem[2].dq[39]
+set_location_assignment PIN_CG12 -to ddr4_mem[2].dbi_n[4]
+
+set_location_assignment PIN_CN14 -to ddr4_mem[2].dq[40]
+set_location_assignment PIN_CM15 -to ddr4_mem[2].dq[41]
+set_location_assignment PIN_CM11 -to ddr4_mem[2].dq[42]
+set_location_assignment PIN_CL10 -to ddr4_mem[2].dq[43]
+set_location_assignment PIN_CL14 -to ddr4_mem[2].dq[44]
+set_location_assignment PIN_CK15 -to ddr4_mem[2].dq[45]
+set_location_assignment PIN_CK11 -to ddr4_mem[2].dq[46]
+set_location_assignment PIN_CN10 -to ddr4_mem[2].dq[47]
+set_location_assignment PIN_CN12 -to ddr4_mem[2].dbi_n[5]
+
+set_location_assignment PIN_CG4  -to ddr4_mem[2].dq[48]
+set_location_assignment PIN_CG8  -to ddr4_mem[2].dq[49]
+set_location_assignment PIN_CF7  -to ddr4_mem[2].dq[50]
+set_location_assignment PIN_CF3  -to ddr4_mem[2].dq[51]
+set_location_assignment PIN_CE8  -to ddr4_mem[2].dq[52]
+set_location_assignment PIN_CH7  -to ddr4_mem[2].dq[53]
+set_location_assignment PIN_CE4  -to ddr4_mem[2].dq[54]
+set_location_assignment PIN_CH3  -to ddr4_mem[2].dq[55]
+set_location_assignment PIN_CH5  -to ddr4_mem[2].dbi_n[6]
+
+set_location_assignment PIN_CM7  -to ddr4_mem[2].dq[56]
+set_location_assignment PIN_CN8  -to ddr4_mem[2].dq[57]
+set_location_assignment PIN_CM3  -to ddr4_mem[2].dq[58]
+set_location_assignment PIN_CL4  -to ddr4_mem[2].dq[59]
+set_location_assignment PIN_CL8  -to ddr4_mem[2].dq[60]
+set_location_assignment PIN_CK7  -to ddr4_mem[2].dq[61]
+set_location_assignment PIN_CN4  -to ddr4_mem[2].dq[62]
+set_location_assignment PIN_CK3  -to ddr4_mem[2].dq[63]
+set_location_assignment PIN_CM5  -to ddr4_mem[2].dbi_n[7]
+
+set_location_assignment PIN_DA28 -to ddr4_mem[2].dq[64]
+set_location_assignment PIN_DB29 -to ddr4_mem[2].dq[65]
+set_location_assignment PIN_CY25 -to ddr4_mem[2].dq[66]
+set_location_assignment PIN_DC24 -to ddr4_mem[2].dq[67]
+set_location_assignment PIN_DA24 -to ddr4_mem[2].dq[68]
+set_location_assignment PIN_CY29 -to ddr4_mem[2].dq[69]
+set_location_assignment PIN_DC28 -to ddr4_mem[2].dq[70]
+set_location_assignment PIN_DB25 -to ddr4_mem[2].dq[71]
+set_location_assignment PIN_DC26 -to ddr4_mem[2].dbi_n[8]
+
+#-----------------------------------------------------------------------------
+# DDR4 Channel 3 (DDR4D) - 8 GiB
+#-----------------------------------------------------------------------------
+set_location_assignment PIN_CN38 -to ddr4_mem[3].ref_clk
+
+# Address/Command
+set_location_assignment PIN_CH31 -to ddr4_mem[3].a[0]
+set_location_assignment PIN_CF31 -to ddr4_mem[3].a[1]
+set_location_assignment PIN_CG32 -to ddr4_mem[3].a[2]
+set_location_assignment PIN_CE32 -to ddr4_mem[3].a[3]
+set_location_assignment PIN_CH33 -to ddr4_mem[3].a[4]
+set_location_assignment PIN_CF33 -to ddr4_mem[3].a[5]
+set_location_assignment PIN_CG34 -to ddr4_mem[3].a[6]
+set_location_assignment PIN_CE34 -to ddr4_mem[3].a[7]
+set_location_assignment PIN_CH35 -to ddr4_mem[3].a[8]
+set_location_assignment PIN_CF35 -to ddr4_mem[3].a[9]
+set_location_assignment PIN_CG36 -to ddr4_mem[3].a[10]
+set_location_assignment PIN_CE36 -to ddr4_mem[3].a[11]
+set_location_assignment PIN_CK39 -to ddr4_mem[3].a[12]
+set_location_assignment PIN_CN40 -to ddr4_mem[3].a[13]
+set_location_assignment PIN_CL40 -to ddr4_mem[3].a[14]
+set_location_assignment PIN_CM41 -to ddr4_mem[3].a[15]
+set_location_assignment PIN_CK41 -to ddr4_mem[3].a[16]
+set_location_assignment PIN_CL42 -to ddr4_mem[3].ba[0]
+set_location_assignment PIN_CM43 -to ddr4_mem[3].ba[1]
+set_location_assignment PIN_CK43 -to ddr4_mem[3].bg[0]
+set_location_assignment PIN_CM31 -to ddr4_mem[3].bg[1]
+set_location_assignment PIN_CM35 -to ddr4_mem[3].ck
+set_location_assignment PIN_CK35 -to ddr4_mem[3].ck_n
+set_location_assignment PIN_CN34 -to ddr4_mem[3].cke[0]
+set_location_assignment PIN_CL34 -to ddr4_mem[3].cke[1]
+set_location_assignment PIN_CN32 -to ddr4_mem[3].cs_n[0]
+set_location_assignment PIN_CN36 -to ddr4_mem[3].cs_n[1]
+set_location_assignment PIN_CM33 -to ddr4_mem[3].odt[0]
+set_location_assignment PIN_CK33 -to ddr4_mem[3].odt[1]
+set_location_assignment PIN_CK31 -to ddr4_mem[3].reset_n
+set_location_assignment PIN_CL32 -to ddr4_mem[3].act_n
+set_location_assignment PIN_CL36 -to ddr4_mem[3].par
+set_location_assignment PIN_CN42 -to ddr4_mem[3].alert_n
+set_location_assignment PIN_CM39 -to ddr4_mem[3].oct_rzqin
+
+# DQS groups
+set_location_assignment PIN_CG54 -to ddr4_mem[3].dqs[0]
+set_location_assignment PIN_CE54 -to ddr4_mem[3].dqs_n[0]
+set_location_assignment PIN_CN54 -to ddr4_mem[3].dqs[1]
+set_location_assignment PIN_CL54 -to ddr4_mem[3].dqs_n[1]
+set_location_assignment PIN_CH47 -to ddr4_mem[3].dqs[2]
+set_location_assignment PIN_CF47 -to ddr4_mem[3].dqs_n[2]
+set_location_assignment PIN_DB47 -to ddr4_mem[3].dqs[3]
+set_location_assignment PIN_CY47 -to ddr4_mem[3].dqs_n[3]
+set_location_assignment PIN_DC40 -to ddr4_mem[3].dqs[4]
+set_location_assignment PIN_DA40 -to ddr4_mem[3].dqs_n[4]
+set_location_assignment PIN_CM47 -to ddr4_mem[3].dqs[5]
+set_location_assignment PIN_CK47 -to ddr4_mem[3].dqs_n[5]
+set_location_assignment PIN_DB33 -to ddr4_mem[3].dqs[6]
+set_location_assignment PIN_CY33 -to ddr4_mem[3].dqs_n[6]
+set_location_assignment PIN_CV33 -to ddr4_mem[3].dqs[7]
+set_location_assignment PIN_CT33 -to ddr4_mem[3].dqs_n[7]
+set_location_assignment PIN_CU40 -to ddr4_mem[3].dqs[8]
+set_location_assignment PIN_CR40 -to ddr4_mem[3].dqs_n[8]
+
+# DQ byte lanes 0-8 (72-bit)
+set_location_assignment PIN_CF57 -to ddr4_mem[3].dq[0]
+set_location_assignment PIN_CG56 -to ddr4_mem[3].dq[1]
+set_location_assignment PIN_CG52 -to ddr4_mem[3].dq[2]
+set_location_assignment PIN_CH53 -to ddr4_mem[3].dq[3]
+set_location_assignment PIN_CF53 -to ddr4_mem[3].dq[4]
+set_location_assignment PIN_CE56 -to ddr4_mem[3].dq[5]
+set_location_assignment PIN_CE52 -to ddr4_mem[3].dq[6]
+set_location_assignment PIN_CH57 -to ddr4_mem[3].dq[7]
+set_location_assignment PIN_CH55 -to ddr4_mem[3].dbi_n[0]
+
+set_location_assignment PIN_CM57 -to ddr4_mem[3].dq[8]
+set_location_assignment PIN_CN56 -to ddr4_mem[3].dq[9]
+set_location_assignment PIN_CM53 -to ddr4_mem[3].dq[10]
+set_location_assignment PIN_CL52 -to ddr4_mem[3].dq[11]
+set_location_assignment PIN_CK57 -to ddr4_mem[3].dq[12]
+set_location_assignment PIN_CL56 -to ddr4_mem[3].dq[13]
+set_location_assignment PIN_CN52 -to ddr4_mem[3].dq[14]
+set_location_assignment PIN_CK53 -to ddr4_mem[3].dq[15]
+set_location_assignment PIN_CM55 -to ddr4_mem[3].dbi_n[1]
+
+set_location_assignment PIN_CH45 -to ddr4_mem[3].dq[16]
+set_location_assignment PIN_CE50 -to ddr4_mem[3].dq[17]
+set_location_assignment PIN_CF49 -to ddr4_mem[3].dq[18]
+set_location_assignment PIN_CH49 -to ddr4_mem[3].dq[19]
+set_location_assignment PIN_CF45 -to ddr4_mem[3].dq[20]
+set_location_assignment PIN_CG46 -to ddr4_mem[3].dq[21]
+set_location_assignment PIN_CE46 -to ddr4_mem[3].dq[22]
+set_location_assignment PIN_CG50 -to ddr4_mem[3].dq[23]
+set_location_assignment PIN_CG48 -to ddr4_mem[3].dbi_n[2]
+
+set_location_assignment PIN_DA50 -to ddr4_mem[3].dq[24]
+set_location_assignment PIN_CY49 -to ddr4_mem[3].dq[25]
+set_location_assignment PIN_DC46 -to ddr4_mem[3].dq[26]
+set_location_assignment PIN_CY45 -to ddr4_mem[3].dq[27]
+set_location_assignment PIN_DC50 -to ddr4_mem[3].dq[28]
+set_location_assignment PIN_DB49 -to ddr4_mem[3].dq[29]
+set_location_assignment PIN_DA46 -to ddr4_mem[3].dq[30]
+set_location_assignment PIN_DB45 -to ddr4_mem[3].dq[31]
+set_location_assignment PIN_DC48 -to ddr4_mem[3].dbi_n[3]
+
+set_location_assignment PIN_CY43 -to ddr4_mem[3].dq[32]
+set_location_assignment PIN_DA42 -to ddr4_mem[3].dq[33]
+set_location_assignment PIN_DC38 -to ddr4_mem[3].dq[34]
+set_location_assignment PIN_DA38 -to ddr4_mem[3].dq[35]
+set_location_assignment PIN_DB43 -to ddr4_mem[3].dq[36]
+set_location_assignment PIN_DC42 -to ddr4_mem[3].dq[37]
+set_location_assignment PIN_CY39 -to ddr4_mem[3].dq[38]
+set_location_assignment PIN_DB39 -to ddr4_mem[3].dq[39]
+set_location_assignment PIN_DB41 -to ddr4_mem[3].dbi_n[4]
+
+set_location_assignment PIN_CM45 -to ddr4_mem[3].dq[40]
+set_location_assignment PIN_CN50 -to ddr4_mem[3].dq[41]
+set_location_assignment PIN_CL46 -to ddr4_mem[3].dq[42]
+set_location_assignment PIN_CK49 -to ddr4_mem[3].dq[43]
+set_location_assignment PIN_CK45 -to ddr4_mem[3].dq[44]
+set_location_assignment PIN_CM49 -to ddr4_mem[3].dq[45]
+set_location_assignment PIN_CN46 -to ddr4_mem[3].dq[46]
+set_location_assignment PIN_CL50 -to ddr4_mem[3].dq[47]
+set_location_assignment PIN_CN48 -to ddr4_mem[3].dbi_n[5]
+
+set_location_assignment PIN_DA36 -to ddr4_mem[3].dq[48]
+set_location_assignment PIN_DC32 -to ddr4_mem[3].dq[49]
+set_location_assignment PIN_CY31 -to ddr4_mem[3].dq[50]
+set_location_assignment PIN_DB31 -to ddr4_mem[3].dq[51]
+set_location_assignment PIN_CY35 -to ddr4_mem[3].dq[52]
+set_location_assignment PIN_DC36 -to ddr4_mem[3].dq[53]
+set_location_assignment PIN_DB35 -to ddr4_mem[3].dq[54]
+set_location_assignment PIN_DA32 -to ddr4_mem[3].dq[55]
+set_location_assignment PIN_DC34 -to ddr4_mem[3].dbi_n[6]
+
+set_location_assignment PIN_CT31 -to ddr4_mem[3].dq[56]
+set_location_assignment PIN_CR36 -to ddr4_mem[3].dq[57]
+set_location_assignment PIN_CV35 -to ddr4_mem[3].dq[58]
+set_location_assignment PIN_CT35 -to ddr4_mem[3].dq[59]
+set_location_assignment PIN_CU32 -to ddr4_mem[3].dq[60]
+set_location_assignment PIN_CV31 -to ddr4_mem[3].dq[61]
+set_location_assignment PIN_CR32 -to ddr4_mem[3].dq[62]
+set_location_assignment PIN_CU36 -to ddr4_mem[3].dq[63]
+set_location_assignment PIN_CU34 -to ddr4_mem[3].dbi_n[7]
+
+set_location_assignment PIN_CV39 -to ddr4_mem[3].dq[64]
+set_location_assignment PIN_CR42 -to ddr4_mem[3].dq[65]
+set_location_assignment PIN_CT43 -to ddr4_mem[3].dq[66]
+set_location_assignment PIN_CV43 -to ddr4_mem[3].dq[67]
+set_location_assignment PIN_CR38 -to ddr4_mem[3].dq[68]
+set_location_assignment PIN_CT39 -to ddr4_mem[3].dq[69]
+set_location_assignment PIN_CU42 -to ddr4_mem[3].dq[70]
+set_location_assignment PIN_CU38 -to ddr4_mem[3].dq[71]
+set_location_assignment PIN_CV41 -to ddr4_mem[3].dbi_n[8]

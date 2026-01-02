@@ -1,0 +1,9 @@
+[ip]
+type = memory
+
+[settings]
+output_name = mem_ss
+# Custom DE10 Agilex preset - 4x DDR4 SO-DIMM, 72-bit with ECC, NO HPS
+# DE10 Agilex has no HPS, so we use a custom preset without MEM_TYPE_HPS_EMIF_DDR4
+# Pin locations defined in syn/board/de10-agilex/setup/emif_loc.tcl
+preset = de10-agilex

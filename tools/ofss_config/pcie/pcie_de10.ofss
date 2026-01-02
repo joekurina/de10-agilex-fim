@@ -1,0 +1,26 @@
+##
+## DE10 Agilex PCIe Configuration
+## P-Tile Gen4 x16 (hardware capability)
+## Single PF with 3 VFs for OFS/OPAE compatibility
+##
+
+[ip]
+type = pcie
+
+[settings]
+output_name = pcie_ss
+pcie_gen = 4
+
+[pf0]
+num_vfs = 3
+bar0_address_width = 20
+vf_bar0_address_width = 20
+
+[pf1]
+
+[pf2]
+bar0_address_width = 18
+
+[pf3]
+
+[pf4]

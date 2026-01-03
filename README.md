@@ -18,7 +18,7 @@ I have access to hardware and will play around with it in the coming months.
 Use all of this at your own risk and let me know how it goes.
 
 System Requirements:
-- Almalinux/RockyLinux/RHEL 8.10 (9 is probably OK too. 8.8 is what OneAPI is validated on.)
+- Almalinux/RockyLinux/RHEL 8.10 (9 is probably OK too*. 8.8 is what OneAPI is validated on.)
 - Quartus Prime Pro 24.1
 - Quartus Patches 0.18 and 0.26, included in ofs-2024.2-1 release files
 - OneAPI Base Toolkit 2025.0
@@ -122,3 +122,4 @@ cd $OFS_ROOTDIR/work/syn/board/de10-agilex/syn_top/build_flash/
 # Remember: Set SW6.0 = UP to boot from User page!
 ```
 
+* NOTE: Quartus 24.1 contains an older OpenSSL library than the RHEL 9 system's library which makes building this a pain, stick with RHEL 8 if possible.
